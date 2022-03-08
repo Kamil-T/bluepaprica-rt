@@ -21,3 +21,24 @@
     font-weight: 900;
   }
 }
+
+.saving {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $white;
+  height: 213px;
+  width: 320px;
+  border-radius: 15px;
+  background-color: $black;
+  font-weight: 900;
+
+  p {
+    font-size: 24px;
+    color: $gray;
+  }
+}
+
+#active {
+  color: $orange;
+}
