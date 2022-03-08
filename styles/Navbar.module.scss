@@ -1,0 +1,17 @@
+#navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 59px 20px 0;
+  div {
+    flex-basis: 30%;
+  }
+}
+
+#menus {
+  display: flex;
+  flex-basis: 20%;
+  align-items: center;
+  justify-content: space-between;
+}
