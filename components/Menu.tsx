@@ -1,9 +1,10 @@
 import styles from '../styles/Menu.module.scss'
 
-const Menu = ({ isOpen }) => {
-  console.log(isOpen)
+const Menu = (props: any) => {
+  const { isOpenMenu } = props
+  console.log(isOpenMenu)
   return (
-    isOpen && (
+    isOpenMenu && (
       <div id={styles.menu}>
         <h5>Policz zyski</h5>
         <h5>O produkcie</h5>

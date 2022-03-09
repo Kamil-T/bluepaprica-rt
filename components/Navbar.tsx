@@ -8,8 +8,11 @@ import Menu from './Menu'
 import { useState } from 'react'
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const toggleOpen = () => setIsOpen(!isOpen)
+  const [isOpenMenu, setIsOpenMenu] = useState(false)
+  const [isOpenLanguage, setIsOpenLanguage] = useState(false)
+
+  const toggleOpenMenu = () => setIsOpenMenu(!isOpenMenu)
+  const toggleOpenLanguage = () => setIsOpenLanguage(!isOpenLanguage)
 
   return (
     <header id={styles.header}>
@@ -17,18 +20,26 @@ const Navbar = () => {
         <Image src={Logo} alt='logo' />
 
         <div id={styles.menus}>
-          <section>
-            <span>PL</span>
-            <Image src={Arrow} alt='language selection button' />
+          <section id={styles.languageMenu}>
+            <div>
+              <span>PL</span>
+              <span>EN</span>
+              <span>ES</span>
+            </div>
+            <Image
+              onClick={toggleOpenLanguage}
+              src={Arrow}
+              alt='language selection button'
+            />
           </section>
           <Image
-            onClick={toggleOpen}
-            src={isOpen ? XButton : MenuButton}
+            onClick={toggleOpenMenu}
+            src={isOpenMenu ? XButton : MenuButton}
             alt='menu button'
           />
         </div>
       </div>
-      <Menu isOpen={isOpen} />
+      <Menu isOpenMenu={isOpenMenu} />
     </header>
   )
 }

@@ -24,7 +24,16 @@
   #menus {
     display: flex;
     flex-basis: 20%;
+    height: 51px;
     align-items: center;
     justify-content: space-between;
+  }
+  #languageMenu {
+    display: flex;
+
+    div {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
