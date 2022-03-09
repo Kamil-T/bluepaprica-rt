@@ -23,34 +23,38 @@ const Calculator = () => {
 
   return (
     <div id={styles.calculator}>
-      <p>Ile zaoszczędzisz?</p>
-      <span>Rachunek jest prosty</span>
-      <p>Ile pojemników na szkło zapełniasz miesięcznie?</p>
-      <form>
-        <input
-          type='text'
-          name='container-count'
-          placeholder='20'
-          onChange={(e) => handleChange(e, setCount)}
-        />
-      </form>
-      <p>Ile płacisz za wywóz jednego pojemnika na szkło?</p>
-      <form>
-        <input
-          type='text'
-          name='price-of-container'
-          placeholder='20'
-          onChange={(e) => handleChange(e, setPrice)}
-        />
-      </form>
+      <h2>Ile zaoszczędzisz?</h2>
+      <p>Rachunek jest prosty.</p>
+      <div className={styles.calcbox}>
+        <h4>Ile pojemników na szkło zapełniasz miesięcznie?</h4>
+        <form>
+          <input
+            type='text'
+            name='container-count'
+            placeholder='20'
+            onChange={(e) => handleChange(e, setCount)}
+          />
+        </form>
+      </div>
+      <div className={styles.calcbox}>
+        <h4>Ile płacisz za wywóz jednego pojemnika na szkło?</h4>
+        <form>
+          <input
+            type='text'
+            name='price-of-container'
+            placeholder='20'
+            onChange={(e) => handleChange(e, setPrice)}
+          />
+        </form>
+      </div>
 
-      <div className={styles.saving}>
-        <span>Dzięki kruszarce zaoszczędzisz</span>
-        <p id={isNaN(saving) === false ? styles.active : ''}>
+      <div className={` ${styles.saving}`}>
+        <h4>Dzięki kruszarce zaoszczędzisz</h4>
+        <h2 id={isNaN(saving) === false ? styles.active : ''}>
           {' '}
           {isNaN(saving) === true ? '900' : saving} zł{' '}
-        </p>
-        <span>rocznie.</span>
+        </h2>
+        <h4>rocznie.</h4>
       </div>
     </div>
   )
