@@ -1,0 +1,33 @@
+@import './variables.module.scss';
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  margin: 107.5px 0 0;
+  position: fixed;
+  width: 360px;
+  background-color: white;
+
+  h5 {
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 72px;
+    margin-bottom: 0;
+  }
+  button {
+    align-self: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    color: $black;
+    width: 152px;
+    height: 50px;
+    margin: 72px 0 199px;
+    background-color: $orange;
+    border: 2px solid $orange;
+    box-shadow: 0px 20px 59px -10px rgba(0, 0, 0, 0.15);
+    border-radius: 28.5px;
+  }
+}
