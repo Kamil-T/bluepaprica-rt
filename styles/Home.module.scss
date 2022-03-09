@@ -1,4 +1,89 @@
+@import './variables.module';
+
 #main {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+#upperSection {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  margin-top: 109px;
+
+  h1 {
+    text-align: center;
+    margin: 38px 20px 60px;
+  }
+
+  #textSection {
+    height: 313px;
+    width: 360px;
+    text-align: center;
+    background-color: $orange;
+    border-radius: 10px;
+
+    h2 {
+      margin: 50px 40px 25px;
+    }
+
+    p {
+      margin: 0 20px;
+    }
+  }
+
+  #image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 348px;
+    border-bottom: 15px;
+    border-color: white;
+    border-style: solid;
+    background-image: url(../public/images/maasloopMobile.png);
+
+    button {
+      width: 80px;
+      height: 80px;
+      margin: 22px 20px;
+      justify-self: flex-end;
+      background-color: $orange;
+      border: none;
+      border-radius: 59px;
+      box-shadow: 0px 20px 59px -10px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+#bottomSection {
+  margin: 50px 20px 103px;
+  text-align: center;
+  p {
+    width: 280px;
+    margin: 0 auto;
+  }
+  button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    text-align: center;
+    width: 320px;
+    height: 80px;
+    margin: 60px auto;
+    background: $orange;
+    border: none;
+    box-shadow: 0px 34px 64px -10px rgba(0, 0, 0, 0.15);
+    border-radius: 47.5px;
+
+    & h3 {
+      display: inline;
+    }
+  }
+
+  h3 {
+    width: 240px;
+    text-align: center;
+    margin: 0 auto;
+  }
 }

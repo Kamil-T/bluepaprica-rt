@@ -1,8 +1,10 @@
 import type { NextPage } from 'next'
+import Image from 'next/image'
 import Head from 'next/head'
-import Navbar from '../components/Navbar'
 import styles from '../styles/Home.module.scss'
+import Navbar from '../components/Navbar'
 import Calculator from '../components/Calculator'
+import ShoppingBag from '../public/images/shoppingBag.svg'
 
 const Home: NextPage = () => {
   return (
@@ -13,7 +15,35 @@ const Home: NextPage = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Navbar />
+      <div id={styles.upperSection}>
+        <h1>Inteligentna kruszarka, która zamienia szkło w piasek.</h1>
+        <div id={styles.image}>
+          <button>
+            <Image
+              src={ShoppingBag}
+              alt='buy button'
+              width={28.89}
+              height={45.28}
+            />
+          </button>
+        </div>
+
+        <div id={styles.textSection}>
+          <h2>Płać 5 razy mniej za wywóz odpadów szklanych.</h2>
+          <p>
+            Kruszarka zmniejsza gabaryty szklanych śmieci, a Ty płacisz
+            PIĘ-CIO-KROT-NIE niższe rachunki za ich wywóz.
+          </p>
+        </div>
+      </div>
       <Calculator />
+      <div id={styles.bottomSection}>
+        <p>To na co wydasz zaoszczędzoną gotówkę?</p>
+        <button>
+          <h3>KUP</h3> 8499 zł
+        </button>
+        <h3>Brzmi dobrze? Uważaj. Dopiero się rozkręcamy!</h3>
+      </div>
     </div>
   )
 }

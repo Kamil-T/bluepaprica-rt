@@ -1,9 +1,16 @@
 #navbar {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+  overflow: hidden;
+  width: 100%;
   align-items: center;
-  margin: 59px 20px 0;
+  margin: 0 20px;
+  padding-top: 59px;
+
   div {
     flex-basis: 30%;
   }
