@@ -2,7 +2,6 @@ import styles from '../styles/Menu.module.scss'
 
 const Menu = (props: any) => {
   const { isOpenMenu } = props
-  console.log(isOpenMenu)
   return (
     isOpenMenu && (
       <div id={styles.menu}>

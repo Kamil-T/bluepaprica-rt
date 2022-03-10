@@ -17,7 +17,9 @@ const Calculator = () => {
     let countNumber: string | number = parseFloat(count)
     let priceNumber: string | number = parseFloat(price)
     if (count !== undefined && price !== undefined) {
-      setSaving(countNumber * priceNumber - (countNumber * priceNumber) / 5)
+      setSaving(
+        12 * (countNumber * priceNumber - (countNumber * priceNumber) / 5)
+      )
     }
   }, [count, price])
 
