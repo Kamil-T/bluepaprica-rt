@@ -1,6 +1,8 @@
+import { useLanguage } from '../contexts/LanguageContext'
 import styles from '../styles/Menu.module.scss'
 
 const Menu = (props: any) => {
+  const { language } = useLanguage()
   const { isOpenMenu } = props
   return (
     isOpenMenu && (

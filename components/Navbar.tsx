@@ -6,12 +6,13 @@ import XButton from '../public/images/xbutton.svg'
 import styles from '../styles/Navbar.module.scss'
 import Menu from './Menu'
 import { useState } from 'react'
+import { useLanguage } from '../contexts/LanguageContext'
 
 const Navbar = () => {
+  const { language, setLanguage } = useLanguage()
   const [isOpenMenu, setIsOpenMenu] = useState(false)
   const [isOpenLanguage, setIsOpenLanguage] = useState(false)
-  const [language, setLanguage] = useState('PL')
-  const languages = ['PL', 'EN', 'PL', 'EN']
+  const languages = ['PL', 'EN', 'ES', 'PT']
 
   const toggleOpenMenu = () => setIsOpenMenu(!isOpenMenu)
   const toggleOpenLanguage = () => setIsOpenLanguage(!isOpenLanguage)

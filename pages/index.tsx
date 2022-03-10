@@ -1,12 +1,17 @@
 import type { NextPage } from 'next'
+import { useLanguage } from '../contexts/LanguageContext'
 import Image from 'next/image'
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import Navbar from '../components/Navbar'
 import Calculator from '../components/Calculator'
 import ShoppingBag from '../public/images/shoppingBag.svg'
+import textsData from '../texts.json'
 
 const Home: NextPage = () => {
+  const { language } = useLanguage()
+  const text = textsData[language]
+
   return (
     <div id={styles.main}>
       <Head>
@@ -16,7 +21,7 @@ const Home: NextPage = () => {
       </Head>
       <Navbar />
       <div id={styles.upperSection}>
-        <h1>Inteligentna kruszarka, która zamienia szkło w piasek.</h1>
+        <h1>{text.title}</h1>
         <div id={styles.image}>
           <button>
             <Image

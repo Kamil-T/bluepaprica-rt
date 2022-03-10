@@ -1,7 +1,9 @@
 import { ChangeEvent, SetStateAction, useEffect, useState } from 'react'
+import { useLanguage } from '../contexts/LanguageContext'
 import styles from '../styles/Calculator.module.scss'
 
 const Calculator = () => {
+  const { language } = useLanguage()
   const [count, setCount] = useState<string>('')
   const [price, setPrice] = useState<string>('')
   const [saving, setSaving] = useState<number>(NaN)
