@@ -10,28 +10,47 @@ import { useState } from 'react'
 const Navbar = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false)
   const [isOpenLanguage, setIsOpenLanguage] = useState(false)
+  const [language, setLanguage] = useState('PL')
+  const languages = ['PL', 'EN', 'PL', 'EN']
 
   const toggleOpenMenu = () => setIsOpenMenu(!isOpenMenu)
   const toggleOpenLanguage = () => setIsOpenLanguage(!isOpenLanguage)
+  const changeLanguage = (lang: string) => {
+    setLanguage(lang)
+    toggleOpenLanguage()
+  }
 
   return (
     <header id={styles.header}>
       <div id={styles.navbar}>
-        <Image src={Logo} alt='logo' />
+        <Image src={Logo} alt='logo' width={97} height={41} />
 
         <div id={styles.menus}>
           <section id={styles.languageMenu}>
             <div>
-              <span>PL</span>
-              <span>EN</span>
-              <span>ES</span>
+              {!isOpenLanguage && <span>{language}</span>}
+              {isOpenLanguage && (
+                <>
+                  {languages.map((lang) => {
+                    return (
+                      <span
+                        key={lang}
+                        onClick={() => {
+                          changeLanguage(lang)
+                        }}>
+                        {lang}
+                      </span>
+                    )
+                  })}
+                </>
+              )}
             </div>
-            <Image
-              onClick={toggleOpenLanguage}
-              src={Arrow}
-              alt='language selection button'
-            />
           </section>
+          <Image
+            onClick={toggleOpenLanguage}
+            src={Arrow}
+            alt='language selection button'
+          />
           <Image
             onClick={toggleOpenMenu}
             src={isOpenMenu ? XButton : MenuButton}
@@ -39,6 +58,7 @@ const Navbar = () => {
           />
         </div>
       </div>
+
       <Menu isOpenMenu={isOpenMenu} />
     </header>
   )

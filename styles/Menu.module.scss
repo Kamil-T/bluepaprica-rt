@@ -3,10 +3,11 @@
 #menu {
   display: flex;
   flex-direction: column;
-  z-index: 2;
+  width: 100%;
+  z-index: 1;
   margin: 107.5px 0 0;
   position: fixed;
-  width: 100%;
+  overflow: visible;
   background-color: white;
 
   h5 {

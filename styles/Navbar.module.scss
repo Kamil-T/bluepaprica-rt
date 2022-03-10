@@ -8,32 +8,39 @@
     flex-direction: row;
     justify-content: space-between;
     position: fixed;
-    z-index: 1;
+    z-index: 6;
     background-color: white;
     overflow: hidden;
-    width: 90%;
+    width: 100%;
     align-items: center;
-    margin: 0 20px;
+    padding: 0 20px;
     padding-top: 59px;
 
     div {
-      flex-basis: 30%;
+      flex-basis: 40%;
     }
   }
 
   #menus {
     display: flex;
-    flex-basis: 20%;
-    height: 51px;
-    align-items: center;
     justify-content: space-between;
   }
   #languageMenu {
     display: flex;
+    flex-direction: column;
+    width: 63px;
+    text-align: center;
+    z-index: 5;
 
     div {
       display: flex;
       flex-direction: column;
+      position: fixed;
+      width: 63px;
+      text-align: center;
+      z-index: 6;
+      overflow: visible;
+      box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
     }
   }
 }
