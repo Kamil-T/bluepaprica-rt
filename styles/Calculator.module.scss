@@ -69,3 +69,37 @@
   color: $orange;
   opacity: 1;
 }
+
+@media screen and (min-width: 1024px) {
+  #calculator {
+    width: 1024px;
+  }
+  #calcboxes {
+    display: flex;
+    flex-direction: row;
+  }
+  .calcbox {
+    width: 491px;
+    margin: 58px 15px 30px;
+    h4 {
+      width: 360px;
+    }
+    input {
+      font-size: 20px;
+    }
+    input::-webkit-input-placeholder {
+      font-size: 20px;
+    }
+  }
+
+  .saving {
+    flex-direction: row;
+    align-items: center;
+    width: 1012px;
+    height: 127px;
+
+    h2 {
+      margin: 0 17px 0 24px;
+    }
+  }
+}

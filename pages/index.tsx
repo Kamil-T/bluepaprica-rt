@@ -10,6 +10,7 @@ import textsData from '../texts.json'
 
 const Home: NextPage = () => {
   const { language } = useLanguage()
+  // @ts-expect-error
   const text = textsData[language]
 
   return (

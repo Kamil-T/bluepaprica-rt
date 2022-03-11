@@ -27,29 +27,33 @@ const Calculator = () => {
 
   return (
     <div id={styles.calculator}>
-      <h2>Ile zaoszczędzisz?</h2>
-      <p>Rachunek jest prosty.</p>
-      <div className={styles.calcbox}>
-        <h4>Ile pojemników na szkło zapełniasz miesięcznie?</h4>
-        <form>
-          <input
-            type='text'
-            name='container-count'
-            placeholder='20'
-            onChange={(e) => handleChange(e, setCount)}
-          />
-        </form>
-      </div>
-      <div className={styles.calcbox}>
-        <h4>Ile płacisz za wywóz jednego pojemnika na szkło?</h4>
-        <form>
-          <input
-            type='text'
-            name='price-of-container'
-            placeholder='20'
-            onChange={(e) => handleChange(e, setPrice)}
-          />
-        </form>
+      <div>
+        <h2>Ile zaoszczędzisz?</h2>
+        <p>Rachunek jest prosty.</p>
+        <div id={styles.calcboxes}>
+          <div className={styles.calcbox}>
+            <h4>Ile pojemników na szkło zapełniasz miesięcznie?</h4>
+            <form>
+              <input
+                type='text'
+                name='container-count'
+                placeholder='20'
+                onChange={(e) => handleChange(e, setCount)}
+              />
+            </form>
+          </div>
+          <div className={styles.calcbox}>
+            <h4>Ile płacisz za wywóz jednego pojemnika na szkło?</h4>
+            <form>
+              <input
+                type='text'
+                name='price-of-container'
+                placeholder='20'
+                onChange={(e) => handleChange(e, setPrice)}
+              />
+            </form>
+          </div>
+        </div>
       </div>
 
       <div className={` ${styles.saving}`}>

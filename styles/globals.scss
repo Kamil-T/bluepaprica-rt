@@ -49,3 +49,25 @@ form {
 * {
   box-sizing: border-box;
 }
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 55px;
+    line-height: 67px;
+  }
+
+  h2 {
+    font-size: 40px;
+    line-height: 49px;
+  }
+
+  h3 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  h4 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
