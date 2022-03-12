@@ -4,7 +4,6 @@ import styles from '../styles/Menu.module.scss'
 const Menu = (props: any) => {
   const { language } = useLanguage()
   const { isOpenMenu, width } = props
-  console.log(width)
   return (
     isOpenMenu && (
       <div id={styles.menu}>

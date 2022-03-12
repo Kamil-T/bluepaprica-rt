@@ -5,7 +5,7 @@
   flex-direction: column;
   width: 100%;
   z-index: 1;
-  margin: 107.5px 0 0;
+  margin: 104px 0 0;
   position: fixed;
   overflow: visible;
   background-color: white;
@@ -36,8 +36,11 @@
 @media screen and (min-width: 1024px) {
   #menu {
     flex-direction: row;
+    justify-content: center;
     position: relative;
     margin: 0;
+    width: fit-content;
+    left: 3%;
 
     h5 {
       font-size: 16px;
