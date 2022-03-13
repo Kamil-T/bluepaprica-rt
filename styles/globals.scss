@@ -6,6 +6,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -44,6 +45,15 @@ form {
   font-size: 16px;
   line-height: 25px;
   color: $black;
+}
+
+button {
+  transition: transform 500ms ease-in;
+}
+
+button:hover {
+  transition: transform 250ms ease-out;
+  transform: translate(3px, -6px);
 }
 
 * {

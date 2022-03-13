@@ -16,7 +16,14 @@
     text-align: center;
     margin-top: 72px;
     margin-bottom: 0;
+    transition: transform 300ms ease-in;
   }
+
+  h5:hover {
+    transition: transform 500ms ease-out;
+    transform: matrix(1.1, 0, 0, 1.1, -5, -5);
+  }
+
   button {
     align-self: center;
     font-family: 'Montserrat', sans-serif;
@@ -40,7 +47,7 @@
     position: relative;
     margin: 0;
     width: fit-content;
-    left: 3%;
+    left: 2.5%;
 
     h5 {
       font-size: 16px;

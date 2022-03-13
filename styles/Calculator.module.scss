@@ -33,6 +33,11 @@
     height: 70px;
     border-radius: 15px;
     border: 1px solid $black;
+    outline: none;
+  }
+
+  .activeInput {
+    border-color: $orange;
   }
 
   input::-webkit-input-placeholder {

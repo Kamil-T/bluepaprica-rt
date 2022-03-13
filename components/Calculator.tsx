@@ -38,6 +38,7 @@ const Calculator = () => {
                 type='text'
                 name='container-count'
                 placeholder='20'
+                className={`${count !== '' && styles.activeInput}`}
                 onChange={(e) => handleChange(e, setCount)}
               />
             </form>
@@ -49,6 +50,7 @@ const Calculator = () => {
                 type='text'
                 name='price-of-container'
                 placeholder='20'
+                className={`${price !== '' && styles.activeInput}`}
                 onChange={(e) => handleChange(e, setPrice)}
               />
             </form>
